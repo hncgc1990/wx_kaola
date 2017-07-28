@@ -1,0 +1,178 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="searchbar">
+    <image src="/assets/images/icon_scan_qr_code.png" class="icon"></image>
+
+    <view class="searchInput">
+      <image src="/assets/images/search_icon.png"></image>
+      <text>{{hotKey}}</text>
+    </view>
+    <image src="/assets/images/ic_msg_center_enter.png" class="icon"></image>
+  </view>
+
+  <swiper autoplay indicator-dots class="banner" style="height:{{bannerHeight}}px">
+    <swiper-item wx:for="{{bannerList}}" wx:key="{{index}}">
+      <image src="{{item.imgUrl}}" class="banner_img" mode="aspectFit" style="height:{{bannerHeight}}px"></image>
+    </swiper-item>
+
+  </swiper>
+
+  <view class="itemList">
+    <block wx:for="{{itemList}}" wx:key="{{index}}">
+      <image src="{{item.imgUrl}}" class="item_img" mode="aspectFit" style="height:{{itemHeight}}px"></image>
+    </block>
+  </view>
+
+  <view class="itemList2">
+    <block wx:for="{{itemList2}}" wx:key="{{index}}">
+      <image src="{{item.imgUrl}}" mode="aspectFit" style="height:{{item2Height}}px"></image>
+    </block>
+  </view>
+
+  <view class="itemList2">
+    <block wx:for="{{itemList3}}" wx:key="{{index}}">
+      <image src="{{item.imgUrl}}" mode="aspectFit" style="height:{{item3Height}}px"></image>
+    </block>
+  </view>
+  <!--sssssssss  -->
+  <image src="{{item4_image}}" mode="aspectFit" style="height:{{bannerHeight}}px" class="item4"></image>
+
+  <scroll-view scroll-x="true" class="scroll_view">
+    <block wx:for="{{itemList4}}" wx:key="{{index}}">
+      <image src="{{item.imgUrl}}" mode="aspectFit" class="item5" style="height:{{item4Width}}px;width:{{item4Width}}px"></image>
+    </block>
+    <view class="item5_container" style="height:{{item4Width}}px;width:{{item4Width}}px">
+      <view class="see_more">
+        <text class="red">查看全部</text>
+        <view class="line"></view>
+        <text class="gray">see more</text>
+      </view>
+    </view>
+
+  </scroll-view>
+  <!--sssssssss  -->
+
+  <!--item6___start  -->
+  <image src="{{item6_image}}" mode="aspectFit" style="height:{{bannerHeight}}px" class="item6_image"></image>
+
+  <scroll-view scroll-x="true" class="scroll_view">
+    <view wx:for="{{itemList6}}" class="item6" wx:key="{{index}}">
+      <image src="{{item.logoUrl}}" mode="aspectFit" style="height:{{item4Width}}px;width:{{item4Width}}px" class="item6_logo"></image>
+      <image src="{{item.iconUrl}}" mode="aspectFit" class="item6_icon"></image>
+      <view class="item6_title" style="width:{{item4Width}}px"><text>{{item.name+'\n'+item.introduce}}</text></view>
+    </view>
+    <view class="item5_container" style="height:{{item4Width}}px;width:{{item4Width}}px">
+      <view class="see_more">
+        <text class="red">查看全部</text>
+        <view class="line"></view>
+        <text class="gray">see more</text>
+      </view>
+    </view>
+
+  </scroll-view>
+  <!--item6___end  -->
+
+  <!--item7_start  -->
+
+  <image src="{{item7_image}}" mode="aspectFit" style="height:{{bannerHeight}}px" class="item6_image"></image>
+
+  <scroll-view scroll-x="true" class="scroll_view">
+    <view wx:for="{{itemList7}}" class="item7_container" wx:key="{{index}}">
+      <image src="{{item.imgUrl}}" mode="aspectFit" class="item7" style="height:{{item4Width}}px;width:{{item4Width}}px">
+        <view class="item7_discount">{{item.benefitPoint}}</view>
+        <view class="item7_sku"><text>{{item.colorDesc}}</text></view>
+      </image>
+      <text class="item7_name" style="width:{{item4Width}}px">{{item.title}}</text>
+      <text class="item7_des" style="width:{{item4Width}}px">{{item.introduce}}</text>
+      <text class="item7_price" style="width:{{item4Width}}px">￥{{item.currentPrice}}</text>
+    </view>
+    <view class="item5_container" style="height:{{item4Width}}px;width:{{item4Width}}px">
+      <view class="see_more">
+        <text class="red">查看全部</text>
+        <view class="line"></view>
+        <text class="gray">see more</text>
+      </view>
+    </view>
+
+  </scroll-view>
+
+  <!--item7_end -->
+
+
+  <!--精选__start  -->
+
+  <view class="jingxuan_title">今日精选</view>
+
+  <view wx:for="{{jingxuanList}}" class="jingxuan_item" wx:key="{{index}}">
+    <image src="{{item.imageUrl}}"></image>
+    <view class="jingxuan_des">
+      <view><text class="jingxuan_des_title">{{item.title}}</text></view>
+      <view><text class="jingxuan_des_des">{{item.title}}</text></view>
+    </view>
+    <image src="/assets/images/right_arrow_gray.png"></image>
+  </view>
+
+
+  <!--精选__end  -->
+
+
+  <!--个性推荐__start -->
+  <view class="jingxuan_title">个性推荐</view>
+
+
+  <!--个性推荐__end  -->
+  <view class="tuijian_item" wx:for="{{tuijianList}}" wx:key="{{index}}">
+
+    <block wx:if="{{item.imgUrl}}">
+
+    <view class="tuijian_head">
+      <image src="{{item.brandLogoUrl}}" class="tuijian_logo"></image>
+
+      <text class="tuijian_brandname">{{item.brandName}}</text>
+    </view>
+    <image src="{{item.imgUrl}}" class="tuijian_image" style="height:{{screenWidth}}px"></image>
+
+    <view class="tuijian_title"><text >{{item.title}}</text></view>
+    <view class="tuijian_subtitle"><text >{{item.subTitle}}</text></view>
+
+    <view class="tuijian_des">
+       <image src="{{item.flagUrl}}" class="tuijian_country_logo"></image>
+       <view class="tuijian_country"><text>{{item.source}}</text></view>
+       <view class="tuijian_comment"><text>{{item.commentCount}}人评价</text></view>
+    </view>
+
+    <view class="tuijian_detail">
+        <view class="tuijian_price">
+            <text class="tuijian_currentprice">￥{{item.currentPrice}}</text>
+             <text class="tuijian_originalprice">￥{{item.originalPrice}}</text>
+        </view>
+        <view class="tuijian_btns">
+        <view class="tuijian_btn">
+        <image src="/assets/images/i_like_hollow_icon.png" class="tuijian_btn_icon"></image>
+        </view>
+        <view class="tuijian_btn">
+        <image src="/assets/images/ic_goods_detail_share.png" class="tuijian_btn_icon"></image>
+        </view>
+        </view>
+    </view>
+</block>
+<block wx:else>
+    
+    <view class="album_title">{{item.title}}</view>
+    <view class="album_subtitle">{{item.goodsNum}}款商品|{{item.buyerNum}}人购买</view>
+
+    <view class="album_container">
+    <block wx:for="{{item.albumGoodsList}}"   wx:for-item="album">
+        <image src="{{album.imageUrl}}" style="height:{{albumHeigh}}px" class="album_image"></image>
+    </block>
+    </view>
+
+
+</block>
+
+  </view>
+
+
+
+
+</view>

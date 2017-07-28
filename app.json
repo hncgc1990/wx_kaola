@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/account/index",
+    "pages/index/index",
+    
+    "pages/discovery/index",
+    "pages/cart/index",
+    "pages/category/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+ 
+  }

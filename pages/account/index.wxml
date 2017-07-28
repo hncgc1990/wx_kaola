@@ -1,0 +1,83 @@
+<!--pages/account/index.wxml-->
+<view class="container">
+  <view class="head">
+    <view class="head_bar">
+      <image src="/assets/images/title_setting_icon.png"></image>
+      <image src="/assets/images/ic_msg_center_enter.png"></image>
+    </view>
+
+    <view class="hend_content">
+      <view class="head_title"><text>关注您感兴趣的品牌</text></view>
+      <view class="head_des"><text>第一时间发现更多新品/折扣</text></view>
+      <text class="head_login">登录/注册</text>
+    </view>
+  </view>
+  <view class="doubar">
+    <view class="doubar_item">
+      <text>0</text>
+      <text>我的考拉豆</text>
+    </view>
+    <view class="doubar_item">
+      <text>0</text>
+      <text>我的收藏</text>
+    </view>
+    <view class="doubar_item">
+      <text>0</text>
+      <text>关注的品牌</text>
+    </view>
+    <view class="doubar_item">
+      <text>0</text>
+      <text>我的足迹</text>
+    </view>
+  </view>
+
+  <view class="orderbar">
+    <view class="orderbar_head">
+      <view class="orderbar_title">我的订单</view>
+      <view class="orderbar_des">
+        <view>查看全部订单</view>
+        <image src="/assets/images/right_arrow_gray.png"></image>
+      </view>
+    </view>
+    <view class="orderbar_content">
+      <view class="orderbar_item">
+        <image src="/assets/images/waiting_payed_icon.png"></image>
+        <view>待付款</view>
+      </view>
+      <view class="orderbar_item">
+        <image src="/assets/images/waiting_delivered_icon.png"></image>
+        <view>待发货</view>
+      </view>
+      <view class="orderbar_item">
+        <image src="/assets/images/waiting_received_icon.png"></image>
+        <view>待收货</view>
+      </view>
+      <view class="orderbar_item">
+        <image src="/assets/images/waiting_comment_icon.png"></image>
+        <view>待评价</view>
+      </view>
+      <view class="orderbar_item">
+        <image src="/assets/images/goods_rejected_and_refunds.png"></image>
+        <view>退货退款</view>
+      </view>
+    </view>
+  </view>
+ <view class="line"></view>
+ <block wx:for="{{settingList}}">
+  <view class="settingbar"  wx:if="{{item.title}}">
+    <view class="settingbar_title">
+      <image src="{{item.icon}}"></image>
+      <view>{{item.title}}</view>
+    </view>
+    <view class="settingbar_des">
+      <view>{{item.content}}</view>
+      <image src="/assets/images/right_arrow_gray.png"></image>
+    </view>
+  </view>
+      <block wx:else>
+        <view class="line"></view>
+      </block>
+
+  </block>
+
+</view>

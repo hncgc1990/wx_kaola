@@ -1,0 +1,422 @@
+/**index.wxss**/
+.container{
+  width:750rpx;
+  overflow: hidden;
+}
+
+scroll-view{
+  width: 750rpx;
+  overflow: scroll;
+}
+
+/*搜索栏  */
+.searchbar{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   border: 1px solid #eee;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  z-index: 3;
+}
+
+.icon{
+  height: 50rpx;
+  width: 50rpx;
+  margin: 16rpx;
+}
+.searchInput{
+  background-color: #eee;
+  border: 1px solid #eee;
+  border-radius: 8rpx;
+  width: 80%;
+   display: flex;
+   flex-direction: row;
+  align-items: center;
+  height: 50rpx;
+}
+
+.searchInput image{
+   height: 30rpx;
+  width: 30rpx;
+  margin: 8rpx;
+}
+
+.searchInput text{
+   font-size: 12px;
+}
+
+/*轮播广告  */
+.banner{
+  /* height: 300rpx; */
+  margin-top: 82rpx;
+}
+
+.banner_img,.item4{
+  width: 100%;
+}
+
+/*item  */
+
+.itemList{
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  background-color: white;
+}
+
+
+.item_img {
+  width: 20%;
+}
+
+.itemList2 image{
+  width: 50%;
+}
+
+.scroll_view{
+  width: 100%;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+   display: flex;
+   background: white;
+   position: relative;
+}
+
+.item5,.item6,.item7{
+   display: inline-block;
+   margin: 16rpx 8rpx;
+}
+.item5:first-child,.item6:first-child{
+  margin-left: 16rpx;
+}
+.item5:last-child,.item6:last-child{
+  margin-right: 16rpx;
+}
+
+.item5_container{
+  border: 1px solid #eee;
+   margin: 16rpx 8rpx;
+    margin-right: 16rpx;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+}
+.see_more{
+  margin-top: 50%;
+  transform: translate(0,-50%);
+}
+
+.red{
+  color: #ff5454;
+  font-size: 14px;
+}
+
+.gray{
+  border-top: 1px solid #333;
+  color: #333;
+  font-size: 14px;
+}
+
+/*item6  */
+
+.item6_image{
+  position: relative;
+  width: 100%;
+}
+
+.item6_image::after{
+  content: '';
+  border: 16rpx solid white;
+  border-color: transparent transparent white transparent;
+  bottom: 0;
+  left: 16rpx;
+  position: absolute;
+}
+
+.item6{
+  position: relative;
+  text-align: center;
+}
+.item6_logo{
+  display: block;
+}
+
+.item6_icon{
+  position: absolute;
+  margin-top: -40rpx;
+  margin-left: 50%;
+  left: 0;
+  transform: translate(-50%);
+  border: 1px solid #eee;
+  width:80rpx;
+  height: 80rpx;
+}
+
+.item6_title{
+  margin-top: 60rpx;
+  margin-bottom: 20rpx;
+  color: #333;
+  font-size: 11px;
+  overflow:hidden;
+  text-overflow: clip ;
+}
+
+.item6_title text{
+   width: min-content;
+}
+
+
+/*item7  */
+.item7{
+  position: relative;
+  display: block;
+}
+.item7_discount{
+  color: red;
+  border: 1px solid red;
+  position: absolute;
+  display: inline-block;
+  bottom: 8rpx;
+  left: 10rpx;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.item7_sku{
+  color: #999;
+  border: 1px solid #999;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  right: 14rpx;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2rpx;
+  /* writing-mode: vertical-rl;
+  text-orientation: upright; 文字垂直排列*/
+  transform: translate(0,-50%);
+}
+
+.item7_container{
+  text-align: center;
+   display: inline-block;
+}
+.item7_name,.item7_des,.item7_price{
+  display: block;
+   color: #333;
+  font-size: 11px;
+   overflow:hidden;
+  text-overflow: ellipsis ;
+}
+.item7_price{
+  color: red;
+  margin-top: 6rpx;
+}
+
+/*精选  */
+.jingxuan_title{
+  line-height: 100rpx;
+  text-align: center;
+  background-color: white;
+  margin-top: 10rpx;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+}
+
+.jingxuan_item{
+  display: flex;
+  width: 100%;
+  background-color: white;
+  padding: 10rpx;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+}
+
+.jingxuan_item image:first-child{
+ width: 80rpx;
+ height: 80rpx;
+ margin: 16rpx;
+}
+
+.jingxuan_des{
+   width: 75%; 
+  height: 106rpx;
+  border-width: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.jingxuan_des_title{
+  font-size: 14px;
+  color: #333;
+}
+
+.jingxuan_des_des{
+   font-size: 12px;
+  color: #333;
+}
+
+.jingxuan_item image:last-child{
+ width: 12rpx;
+ height: 22rpx;
+ margin-right: 16rpx;
+}
+
+
+/*个性推荐  */
+.tuijian_item{
+  background-color: white;
+  margin-top: 16rpx;
+  padding-bottom: 16rpx;
+}
+
+
+.tuijian_head{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.tuijian_logo{
+  width: 62rpx;
+  height: 62rpx;
+  border: 1px solid #eee;
+  margin: 16rpx;
+}
+.tuijian_brandname{
+  font-size:12px;
+   margin-top: 16rpx;
+}
+
+.tuijian_image{
+  width: 100%;
+}
+
+.tuijian_title{
+  font-size: 12px;
+  margin: 16rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+.tuijian_subtitle{
+font-size: 12px;
+ margin: 4rpx 16rpx;
+ line-height: 14px;
+ max-height: 28px;
+ text-overflow: ellipsis;
+ overflow: hidden;
+ color: #333;
+}
+
+.tuijian_des{
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  margin: 16rpx;
+  margin-top:40rpx; 
+  position: relative;
+}
+
+.tuijian_country_logo{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.tuijian_country{
+  margin-left: 16rpx;
+}
+
+.tuijian_comment{
+  position: absolute;
+  right: 0;
+}
+
+/*个性推荐中的按钮区  */
+.tuijian_detail{
+  margin: 40rpx 16rpx 0rpx 16rpx;
+  position: relative;
+
+}
+
+
+.tuijian_price{
+  display: inline-block;
+   border: 1px solid #ff5454;
+  border-radius: 8rpx;
+   padding: 12rpx 40rpx;
+   color: #ff5454;
+    height: 70rpx;
+    box-sizing: border-box;
+}
+
+/*现价  */
+.tuijian_currentprice{
+  font-size: 16px;
+}
+/*原始价格  */
+.tuijian_originalprice{
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+
+.tuijian_btns{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tuijian_btn{
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: 8rpx;
+  padding: 14rpx 30rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  height: 70rpx;
+  box-sizing: border-box;
+}
+
+
+.tuijian_btn_icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* 个性推荐类型2  */
+.album_title{
+font-size: 16px;
+margin: 16rpx;
+padding-top: 16rpx;
+text-align: center;
+font-weight: bold;
+
+}
+.album_subtitle{
+font-size: 12px;
+margin: 16rpx;
+text-align: center;
+color: #aaa;
+}
+
+
+
+.album_container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top:16rpx;
+}
+
+.album_image{
+  width: 30%;
+  /* border: 1px solid #eee; */
+  margin-bottom: 4rpx;
+}
