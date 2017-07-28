@@ -1,4 +1,6 @@
 /**app.wxss**/
 .container{
   background-color: #eee;
+  width:750rpx;
+  overflow: hidden;
 }
