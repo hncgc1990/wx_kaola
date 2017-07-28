@@ -13,5 +13,43 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   }
- 
+  ,
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ff5454",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/home_normal.png",
+        "selectedIconPath": "assets/images/home_focus.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "iconPath": "assets/images/category_normal.png",
+        "selectedIconPath": "assets/images/category_focus.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/discovery/index",
+        "iconPath": "assets/images/activity_normal.png",
+        "selectedIconPath": "assets/images/activity_focus.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "iconPath": "assets/images/cart_normal.png",
+        "selectedIconPath": "assets/images/cart_focus.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/account/index",
+        "iconPath": "assets/images/kaola_normal.png",
+        "selectedIconPath": "assets/images/kaola_focus.png",
+        "text": "我的"
+      }
+    ]
+  }
   }
