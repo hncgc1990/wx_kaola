@@ -9,9 +9,9 @@
 }
 
 .icon{
-  height: 50rpx;
-  width: 50rpx;
-  margin: 16rpx;
+  height: 40rpx;
+  width: 40rpx;
+  margin: 24rpx;
 }
 .searchInput{
   background-color: #eee;

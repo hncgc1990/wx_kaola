@@ -1,18 +1,50 @@
 // pages/discovery/index.js
+import { discovery} from "../../assets/data/discovery"
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    select:0,
+    bannerHeight:"",
+    halfWidth:"",
+    screenW:"",
+    item4Width:"",
+    bannerList:[],
+    liveRecList:[],
+    hotLiveList:[]
   },
-
+  changeSelect:function(e){
+    this.setData({
+      select:e.currentTarget.dataset.index
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var page=this
+    wx.getSystemInfo({
+      success: function(res) {
+        page.setData({
+          bannerHeight:res.screenWidth*0.8*375/600,
+          halfWidth:res.screenWidth*0.5,
+          screenW:res.screenWidth,
+          item4Width:res.screenWidth*0.28
+        })
+        console.log(page.data.scrollL)
+      },
+    })    
+
+
+
+    this.setData({
+      bannerList: discovery.body.homeDetailInfo.bannerList,
+      liveRecList: discovery.body.homeDetailInfo.liveRecList[1].liveRecList,
+      hotLiveList: discovery.body.homeDetailInfo.liveRecList[2].liveRecList
+    })
   },
 
   /**

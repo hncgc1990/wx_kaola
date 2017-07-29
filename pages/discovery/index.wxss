@@ -1,1 +1,254 @@
 /* pages/discovery/index.wxss */
+
+/*头部按钮  */
+
+.head_bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+
+.head_bar image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 24rpx;
+}
+
+.head_title {
+  display: inline-block;
+  font-size: 16px;
+  padding: 24rpx 0;
+}
+
+.head_title:last-child {
+  margin-left: 16rpx;
+}
+
+.active {
+  border-bottom: 1px solid blueviolet;
+}
+
+/*banner栏  */
+
+.banner {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; */
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 16rpx 0;
+  background-color: white;
+  margin-top: 88rpx;
+}
+
+.banner_item {
+  width: 80%;
+  display: inline-block;
+  margin: 0 8rpx;
+}
+
+/*即将直播  */
+
+.liverec_title {
+  line-height: 80rpx;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  margin-top: 16rpx;
+  font-size: 16px;
+  text-align: center;
+}
+
+.liverec_bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  align-items: center;
+  background-color: white;
+  padding: 16rpx;
+}
+
+.liverec_bar_btn {
+  padding: 4rpx 16rpx;
+  border: 1px solid #ff5454;
+  color: #ff5454;
+}
+
+.liverec_image {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.icon_cotent{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  justify-content: center;
+  }
+
+/*播放按钮  */
+.ic_play {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.liverec_content{
+  position: absolute;
+  left: 16rpx;
+  bottom: 30rpx;
+  color: white;
+  font-size: 12px;
+  text-align: start;
+}
+.content_bar_btn{
+  background-color: #00aaee;
+  padding: 2rpx 12rpx;
+  border: 1px solid #00aaee;
+  border-radius: 4rpx;
+}
+
+.content_bar_text{
+  display: inline-block;
+  margin-left: 8rpx;
+}
+
+.liverec_content_title{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 8rpx;
+}
+
+
+/*白色三角  */
+.liverec_image::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 16rpx;
+  border: 16rpx solid white;
+  border-color: transparent transparent white transparent;
+  width: 0;
+  height: 0;
+}
+
+
+/*侧划产品栏  */
+scroll-view{
+  width: 750rpx;
+  overflow: scroll;
+}
+
+.scroll_view{
+  width: 100%;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+   display: flex;
+   background: white;
+   position: relative;
+}
+
+.item7_container{
+  text-align: center;
+   display: inline-block;
+}
+
+.item7{
+   display: inline-block;
+   margin: 16rpx 8rpx;
+}
+
+.item7{
+  position: relative;
+  display: block;
+}
+
+.item7_discount{
+  color: red;
+  border: 1px solid red;
+  position: absolute;
+  display: inline-block;
+  bottom: 8rpx;
+  left: 10rpx;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+.item7_sku{
+  color: #999;
+  border: 1px solid #999;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  right: 14rpx;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2rpx;
+  /* writing-mode: vertical-rl;
+  text-orientation: upright; 文字垂直排列*/
+  transform: translate(0,-50%);
+}
+
+.item7_container{
+  text-align: center;
+   display: inline-block;
+}
+.item7_name,.item7_des,.item7_price{
+  display: block;
+   color: #333;
+  font-size: 11px;
+   overflow:hidden;
+  text-overflow: ellipsis ;
+}
+.item7_price{
+  color: red;
+  margin-top: 6rpx;
+}
+
+/*查看更多  */
+.item5_container{
+  border: 1px solid #eee;
+   margin: 16rpx 8rpx;
+    margin-right: 16rpx;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+}
+.see_more{
+  margin-top: 50%;
+  transform: translate(0,-50%);
+}
+
+.red{
+  color: #ff5454;
+  font-size: 14px;
+}
+
+.gray{
+  border-top: 1px solid #333;
+  color: #333;
+  font-size: 14px;
+}
+
+/* 精彩视频  */
+.content_bar_time{
+   background-color: #f1c232;
+  padding: 2rpx 12rpx;
+  border: 1px solid #f1c232;
+  border-radius: 4rpx; 
+}
+.firstchild{
+  margin-top: 16rpx;
+}

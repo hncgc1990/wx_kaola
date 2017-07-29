@@ -886,3 +886,7 @@ const discovery = {
     }
   }
 }
+
+export{
+  discovery
+}
