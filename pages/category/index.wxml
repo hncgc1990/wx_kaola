@@ -1,2 +1,27 @@
 <!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<import src="../common/searchbar.wxml" />
+
+
+<view class="container">  
+  <!--搜索栏  -->
+  <template is="searchbar" data="{{hotKey}}"/>
+    <!--左边类目  -->
+    <view class="category_main">
+        <view class="category_item {{index==selected?'active':''}}" wx:for="{{categories}}" data-index="{{index}}" bindtap="changeSelect">
+            <text>{{item.title}}</text>
+        </view>
+    </view>
+    <!--右边子类目  -->
+
+    <view class="category_child">
+    
+    
+    
+    
+    
+    
+    
+    </view>
+
+
+</view>

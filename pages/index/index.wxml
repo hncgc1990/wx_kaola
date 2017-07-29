@@ -1,14 +1,7 @@
 <!--index.wxml-->
+<import src="../common/searchbar.wxml" />
 <view class="container">
-  <view class="searchbar">
-    <image src="/assets/images/icon_scan_qr_code.png" class="icon"></image>
-
-    <view class="searchInput">
-      <image src="/assets/images/search_icon.png"></image>
-      <text>{{hotKey}}</text>
-    </view>
-    <image src="/assets/images/ic_msg_center_enter.png" class="icon"></image>
-  </view>
+   <template is="searchbar" data="{{hotKey}}"/>
 
   <swiper autoplay indicator-dots class="banner" style="height:{{bannerHeight}}px">
     <swiper-item wx:for="{{bannerList}}" wx:key="{{index}}">

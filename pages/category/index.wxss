@@ -1,1 +1,32 @@
 /* pages/category/index.wxss */
+@import "../common/searchbar.wxss";
+
+.searchbar{
+  position: fixed;
+  z-index: 3;
+}
+
+/*主类目  */
+.category_main{
+  width: 30%;
+  background-color: white;
+  height: 100%;
+  text-align: center;
+  margin-top: 82rpx;
+  padding-top: 16rpx;
+  border-right: 1px solid #eee;
+}
+
+.category_item{
+  font-size: 14px;
+  padding: 16rpx;
+  margin: 16rpx;
+}
+
+.active{
+
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 32rpx;
+}

@@ -79,3 +79,6 @@ const category = {
     ]
   }
 }
+export{
+  category
+}

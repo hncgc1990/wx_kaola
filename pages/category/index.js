@@ -1,66 +1,29 @@
 // pages/category/index.js
+
+import { category} from "../../assets/data/category"
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    categories:[],
+    hotKey:'春雨面膜',
+    selected:0
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+  changeSelect:function(e){//左侧类目点击
+    console.log(e.currentTarget.dataset.index)
+    this.setData({
+      selected: e.currentTarget.dataset.index
+    })
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  onLoad: function (options){
+      this.setData({
+        categories: category.body.categoryTreeMenuList
+      })
   }
 })
