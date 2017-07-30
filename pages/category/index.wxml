@@ -2,26 +2,51 @@
 <import src="../common/searchbar.wxml" />
 
 
-<view class="container">  
+<view class="container">
   <!--搜索栏  -->
-  <template is="searchbar" data="{{hotKey}}"/>
+  <template is="searchbar" data="{{hotKey}}" />
+
+  <view class="content">
     <!--左边类目  -->
-    <view class="category_main">
-        <view class="category_item {{index==selected?'active':''}}" wx:for="{{categories}}" data-index="{{index}}" bindtap="changeSelect">
-            <text>{{item.title}}</text>
-        </view>
-    </view>
+    <scroll-view class="category_main" scroll-y>
+      <view class="category_item {{index==selected?'active':''}}" wx:for="{{categories}}" data-index="{{index}}" bindtap="changeSelect">
+        <text>{{item.title}}</text>
+      </view>
+    </scroll-view>
     <!--右边子类目  -->
 
-    <view class="category_child">
-    
-    
-    
-    
-    
-    
-    
-    </view>
+    <scroll-view class="category_child" scroll-y>
+
+      <!-热门分类  -->
+      <view class="hotcategory_title">
+        <text>热门分类</text>
+        <view class="hotcategory_more">
+          <text>热销榜</text>
+          <image src="/assets/images/hot_sale_arrow.png"></image>
+        </view>
+      </view>
+      <view class="hotcategory_list">
+        <view class="hotcategory_item" wx:for="{{hotCategoryList}}">
+          <image src="{{item.iconUrl}}" style="height:{{imageHeight}}px"></image>
+          <view class="hotcategory_name"><text>{{item.categoryName}}</text></view>
+        </view>
+      </view>
+
+      <!--推荐品牌  -->
+      <view class="hotbrand_title">
+        <text>推荐品牌</text>
+      </view>
+
+    <view class="hotcategory_list">
+        <view class="hotcategory_item" wx:for="{{brandList}}">
+          <image src="{{item.brandLogo}}" style="height:{{imageHeight}}px" class="with_border"></image>
+          <view class="hotcategory_name"><text>{{item.brandName}}</text></view>
+        </view>
+      </view>
 
 
+
+    </scroll-view>
+
+  </view>
 </view>
