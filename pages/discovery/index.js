@@ -1,5 +1,7 @@
 // pages/discovery/index.js
 import { discovery} from "../../assets/data/discovery"
+import { worthbuy } from "../../assets/data/worthbuy"
+
 
 Page({
 
@@ -12,9 +14,13 @@ Page({
     halfWidth:"",
     screenW:"",
     item4Width:"",
+    item2Width:"",
     bannerList:[],
     liveRecList:[],
-    hotLiveList:[]
+    hotLiveList:[],
+    itemList:[],
+    worthbuyList:[],
+    worthbuyList2:[]
   },
   changeSelect:function(e){
     this.setData({
@@ -32,7 +38,9 @@ Page({
           bannerHeight:res.screenWidth*0.8*375/600,
           halfWidth:res.screenWidth*0.5,
           screenW:res.screenWidth,
-          item4Width:res.screenWidth*0.28
+          item4Width:res.screenWidth*0.28,
+          item2Width: res.screenWidth *0.33
+
         })
         console.log(page.data.scrollL)
       },
@@ -43,7 +51,10 @@ Page({
     this.setData({
       bannerList: discovery.body.homeDetailInfo.bannerList,
       liveRecList: discovery.body.homeDetailInfo.liveRecList[1].liveRecList,
-      hotLiveList: discovery.body.homeDetailInfo.liveRecList[2].liveRecList
+      hotLiveList: discovery.body.homeDetailInfo.liveRecList[2].liveRecList,
+      itemList:worthbuy.body.itemList[0].itemList,
+      worthbuyList: worthbuy.body.extData1.itemList,
+      worthbuyList2: worthbuy.body.extData2.itemList,
     })
   },
 

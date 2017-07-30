@@ -30,8 +30,10 @@
 }
 
 .active {
-  border-bottom: 1px solid blueviolet;
+  border-bottom: 1px solid #ff5454;
 }
+
+/*page1  */
 
 /*banner栏  */
 
@@ -44,7 +46,7 @@
   white-space: nowrap;
   padding: 16rpx 0;
   background-color: white;
-  margin-top: 88rpx;
+ margin-top: 88rpx;
 }
 
 .banner_item {
@@ -252,3 +254,156 @@ scroll-view{
 .firstchild{
   margin-top: 16rpx;
 }
+
+/*page2  */
+
+/* 按钮栏  */
+.item_container{
+  padding: 24rpx 0;
+  margin-top: 88rpx;
+  width: 100%;
+   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+}
+.item{
+  width: 33%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item_border{
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.item image{
+  width:80rpx;
+  height: 80rpx;
+  display: block;
+}
+
+.item text{
+  font-size: 12px;
+  display: block;
+  margin-top: 16rpx;
+}
+
+
+/*类型1 */
+.item1{
+  margin-top: 16rpx;
+  background-color: white;
+}
+
+.item1_image{
+  width: 100%;
+  position: relative;
+  padding-top: 8rpx;
+  background-color: #eee;
+}
+.item1_label{
+  position: absolute;
+  right: 24rpx;
+  top: 0;
+  background-color: #ff5454;
+  color: white;
+  font-size: 12px;
+  border: 1px solid  #ff5454 ;
+  border-radius: 2rpx;
+  padding:0 10rpx;
+}
+
+.item1_title,.item2_title{
+  margin: 16rpx;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.item1_desc{
+  margin: 16rpx;
+  font-size: 14px;
+  color: #666;
+  line-height: 18px;
+  max-height: 36px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.item1_likebar{
+  text-align: end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:  16rpx;
+  justify-content: flex-end;
+}
+
+.item1_icon{
+  width: 30rpx;
+  height: 30rpx;
+}
+.item1_hint{
+  color:#ff5454;
+  font-size: 14px;
+  margin-left: 8rpx; 
+  display: inline-block;
+}
+
+/*类型2  */
+.item2{
+  background-color: white;
+  margin-top: 16rpx;
+}
+
+.item2_imglist{
+  white-space: nowrap;
+}
+
+.item2_title{
+  padding-top: 24rpx;
+}
+
+
+.item2_desc{
+    font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+    margin-left: 16rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
