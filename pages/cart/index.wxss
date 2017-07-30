@@ -1,1 +1,174 @@
 /* pages/cart/index.wxss */
+.container{
+  background-color: white;
+}
+/*标题栏  */
+.head_bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+
+.head_bar image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 24rpx;
+}
+
+.head_title {
+  display: inline-block;
+  font-size: 16px;
+  padding: 24rpx 0;
+}
+/*购物车提示  */
+.cart_hint{
+  background-color: #ff5454;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 88rpx;
+  align-items: center;
+  padding: 24rpx;
+}
+.cart_hint image{
+  width: 15rpx;
+  height: 21rpx;
+}
+
+/*购物车空视图  */
+.cart_empty{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart_empty image{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 24rpx;
+}
+.cart_empty text{
+  font-size: 14px;
+  margin: 16rpx;
+}
+
+/*商品推荐  */
+.good_rec_title{
+  display: flex;
+  padding: 16rpx 0;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 24rpx;
+}
+
+.line{
+  width: 32%;
+  border-bottom: 1px solid #eee;
+  display: inline-block;
+}
+.goods_title{
+  font-size: 14px;
+}
+
+/*商品列表  */
+.good_rec{
+  margin:  0 16rpx;
+}
+.good_list{
+  width: 50%;
+  display: inline-block;
+  border-bottom: 1px solid #eee;
+}
+
+.good_list image{
+  width: 92%;
+  margin-top: 16rpx;
+  margin-left: 4%;
+  margin-right: 4%;
+  position: relative;
+}
+
+/*热销标签卡  */
+.good_lable{
+  font-size: 11px;
+  padding: 2rpx;
+  background-color: #ff5454;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  }
+  /*颜色  */
+.good_colorpanel{
+  position: absolute;
+  right: 0;
+  top: 40%;
+  padding: 2rpx;
+  /* writing-mode: vertical-lr; */
+  /* text-orientation: upright; */
+  font-size: 11px;
+  color: #666;
+  /* transform: (0,-50%); */
+  border: 1px solid #eee;
+}
+
+.good_title{
+  font-size: 12px;
+  line-height: 16px;
+  max-height: 32px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 10rpx;
+}
+
+.good_curprice{
+  font-size: 12px;
+  color: #ff5454;
+  padding-left: 10rpx;
+  font-weight: bold;
+}
+
+.good_oriprice{
+  font-size: 11px;
+  color: #666;
+  text-decoration: line-through;
+  padding-left: 10rpx;
+}
+
+.good_detail{
+  padding-bottom: 16rpx;
+
+}
+/*自营标识  */
+.good_self{
+  color: #ff5454;
+  font-size: 11px;
+  padding: 2rpx;
+  border: 1px solid #ff5454;
+}
+
+/*折扣信息  */
+.good_discount{
+  background-color: #ff5454;
+  color: white;
+  font-size: 11px;
+  padding: 2rpx;
+  margin-left: 10rpx;
+  display: inline-block;
+}
+/*评价信息  */
+.good_comment{
+  color: #999;
+  font-size: 11px;
+  padding-left: 10rpx;
+}
+
+
+
+
