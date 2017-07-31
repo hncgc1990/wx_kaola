@@ -10,11 +10,6 @@ Page({
    */
   data: {
     select:0,
-    bannerHeight:"",
-    halfWidth:"",
-    screenW:"",
-    item4Width:"",
-    item2Width:"",
     bannerList:[],
     liveRecList:[],
     hotLiveList:[],
@@ -30,21 +25,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    var page=this
-    wx.getSystemInfo({
-      success: function(res) {
-        page.setData({
-          bannerHeight:res.screenWidth*0.8*375/600,
-          halfWidth:res.screenWidth*0.5,
-          screenW:res.screenWidth,
-          item4Width:res.screenWidth*0.28,
-          item2Width: res.screenWidth *0.33
-
-        })
-        console.log(page.data.scrollL)
-      },
-    })    
+  onLoad: function (options) { 
 
 
 

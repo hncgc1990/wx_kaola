@@ -10,44 +10,22 @@ Page({
   data: {
     hotKey: '搜索热词',
     bannerList:[],
-    bannerHeight:'',
-    itemHeight:'',
-    item2Height: '',
-    item3Height: '',
     itemList:[],
     itemList2:[],
     itemList3:[],
     item4_image:'',
     itemList4:[],
-    item4Width:'',
     item6_image:'',
     itemList6:[],
     item7_image:'',
     itemList7:[],
     jingxuanList:[],
-    tuijianList:[],
-    screenWidth:'',
-     albumHeigh: ''
-
+    tuijianList:[]
   },
   onLoad: function () {
-    var page=this
-  wx.getSystemInfo({
-    success: function(res) {
-      page.setData({
-        bannerHeight:res.screenWidth/2,
-        itemHeight:res.screenWidth/5*150/192,
-        item2Height: res.screenWidth/4,
-        item3Height: res.screenWidth / 2 * 555 / 480,
-        item4Width:res.screenWidth*0.28,
-        screenWidth:res.screenWidth,
-        albumHeigh:res.screenWidth*0.3
-      })
-    },
-  })
   
   console.log(json)
-    page.setData({
+    this.setData({
       bannerList: json.body.home[0].bannerList,
       itemList: json.body.home[1].itemList,
       itemList2: json.body.home[2].itemList,

@@ -15,7 +15,7 @@
     <!--banner  -->
     <scroll-view class="banner" scroll-x>
       <block wx:for="{{bannerList}}">
-        <image src="{{item.url}}" class="banner_item" style="height:{{bannerHeight}}px"></image>
+        <image src="{{item.url}}" class="banner_item"></image>
       </block>
     </scroll-view>
 
@@ -26,7 +26,7 @@
         <text class="liverec_bar_hint">明天20:00开播</text>
         <text class="liverec_bar_btn">提醒我</text>
       </view>
-      <view class="liverec_image" style="background-image: url({{item.imageUrl}});height:{{halfWidth}}px;background-size:{{screenW}}px {{halfWidth}}px">
+      <view class="liverec_image" style="background-image: url({{item.imageUrl}});">
 
         <view class="icon_cotent">
           <image src="/assets/images/icon_play_button.png" class="ic_play"></image>
@@ -43,15 +43,15 @@
       </view>
       <scroll-view scroll-x="true" class="scroll_view">
         <view wx:for="{{item.itemList}}" class="item7_container" wx:for-item="good">
-          <image src="{{good.imgUrl}}" mode="aspectFit" class="item7" style="height:{{item4Width}}px;width:{{item4Width}}px">
+          <image src="{{good.imgUrl}}" mode="aspectFit" class="item7" >
             <view class="item7_discount">{{good.benefitPoint}}</view>
             <view class="item7_sku"><text>{{good.colorDesc}}</text></view>
           </image>
-          <text class="item7_name" style="width:{{item4Width}}px">{{good.title}}</text>
-          <text class="item7_des" style="width:{{item4Width}}px">{{good.introduce}}</text>
-          <text class="item7_price" style="width:{{item4Width}}px">￥{{good.currentPrice}}</text>
+          <text class="item7_name" >{{good.title}}</text>
+          <text class="item7_des">{{good.introduce}}</text>
+          <text class="item7_price">￥{{good.currentPrice}}</text>
         </view>
-        <view class="item5_container" style="height:{{item4Width}}px;width:{{item4Width}}px">
+        <view class="item5_container">
           <view class="see_more">
             <text class="red">查看全部</text>
             <view class="line"></view>
@@ -65,7 +65,7 @@
     <!--精彩视频  -->
     <view class="liverec_title"><text>精彩视频</text></view>
     <block wx:for="{{hotLiveList}}">
-      <view class="liverec_image {{index!=0?'firstchild':''}}" style="background-image: url({{item.imageUrl}});height:{{halfWidth}}px;background-size:{{screenW}}px {{halfWidth}}px">
+      <view class="liverec_image {{index!=0?'firstchild':''}}" style="background-image: url({{item.imageUrl}});">
 
         <view class="icon_cotent">
           <image src="/assets/images/icon_play_button.png" class="ic_play"></image>
@@ -82,15 +82,15 @@
       </view>
       <scroll-view scroll-x="true" class="scroll_view">
         <view wx:for="{{item.itemList}}" class="item7_container" wx:for-item="good">
-          <image src="{{good.imgUrl}}" mode="aspectFit" class="item7" style="height:{{item4Width}}px;width:{{item4Width}}px">
+          <image src="{{good.imgUrl}}" mode="aspectFit" class="item7" >
             <view class="item7_discount" wx:if="{{good.benefitPoint}}">{{good.benefitPoint}}</view>
             <view class="item7_sku" wx:if="{{good.colorDesc}}"><text>{{good.colorDesc}}</text></view>
           </image>
-          <text class="item7_name" style="width:{{item4Width}}px">{{good.title}}</text>
-          <text class="item7_des" style="width:{{item4Width}}px">{{good.introduce}}</text>
-          <text class="item7_price" style="width:{{item4Width}}px">￥{{good.currentPrice}}</text>
+          <text class="item7_name" >{{good.title}}</text>
+          <text class="item7_des">{{good.introduce}}</text>
+          <text class="item7_price">￥{{good.currentPrice}}</text>
         </view>
-        <view class="item5_container" style="height:{{item4Width}}px;width:{{item4Width}}px">
+        <view class="item5_container">
           <view class="see_more">
             <text class="red">查看全部</text>
             <view class="line"></view>
@@ -115,7 +115,7 @@
  
     <block wx:for="{{worthbuyList}}">
           <view class="item1">
-              <image src="{{item.imageUrl}}" style="height:{{halfWidth}}px" class="item1_image">
+              <image src="{{item.imageUrl}}" class="item1_image">
                  <text class="item1_label" wx:if="{{item.label}}">{{item.label}}</text>
               </image>
               <view class="item1_title"><text>{{item.title}}</text></view>
@@ -132,7 +132,7 @@
               <view class="item2_desc"><text>{{item.desc}}</text></view>
               <view class="item2_imglist">
                   <block wx:for="{{item.imageList}}" wx:for-item="image">
-                    <image src="{{image}}" style="height:{{item2Width}}px;width:{{item2Width}}px"></image>
+                    <image src="{{image}}" ></image>
                   </block>
               </view>
               <view class="item1_likebar">

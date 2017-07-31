@@ -26,7 +26,7 @@
       </view>
  <view class="good_rec">
       <view class="good_list" wx:for="{{recommendList}}">
-          <image src="{{item.imgUrl}}" style="height:{{imagewidth}}px">
+          <image src="{{item.imgUrl}}">
               <text wx:if="{{item.upLeftType==1}}" class="good_lable">热销</text>
               <text wx:if="{{item.showColorCard==1}}" class="good_colorpanel">{{item.colorDesc}}</text>
           </image>
@@ -38,7 +38,9 @@
 
           <view class="good_detail">
               <text class="good_self" wx:if="{{item.self==1}}">自营</text>
-              <text class="good_discount" wx:for="{{item.benefitPointList}}" wx:for-item="benefit">{{benefit}}</text>
+              <block wx:for="{{item.benefitPointList}}" wx:for-item="benefit">
+              <text class="good_discount" >{{benefit}}</text>
+              </block>
               <text class="good_comment">100%好评</text>
           </view>
       </view>

@@ -3,38 +3,38 @@
 <view class="container">
    <template is="searchbar" data="{{hotKey}}"/>
 
-  <swiper autoplay indicator-dots class="banner" style="height:{{bannerHeight}}px">
+  <swiper autoplay indicator-dots class="banner">
     <swiper-item wx:for="{{bannerList}}" wx:key="{{index}}">
-      <image src="{{item.imgUrl}}" class="banner_img" mode="aspectFit" style="height:{{bannerHeight}}px"></image>
+      <image src="{{item.imgUrl}}" class="banner_img" mode="aspectFit"></image>
     </swiper-item>
 
   </swiper>
 
   <view class="itemList">
     <block wx:for="{{itemList}}" wx:key="{{index}}">
-      <image src="{{item.imgUrl}}" class="item_img" mode="aspectFit" style="height:{{itemHeight}}px"></image>
+      <image src="{{item.imgUrl}}" class="item_img" mode="aspectFit"></image>
     </block>
   </view>
 
   <view class="itemList2">
     <block wx:for="{{itemList2}}" wx:key="{{index}}">
-      <image src="{{item.imgUrl}}" mode="aspectFit" style="height:{{item2Height}}px"></image>
+      <image src="{{item.imgUrl}}" mode="aspectFit" ></image>
     </block>
   </view>
 
   <view class="itemList2">
     <block wx:for="{{itemList3}}" wx:key="{{index}}">
-      <image src="{{item.imgUrl}}" mode="aspectFit" style="height:{{item3Height}}px"></image>
+      <image src="{{item.imgUrl}}" mode="aspectFit" class="item3_image"></image>
     </block>
   </view>
   <!--sssssssss  -->
-  <image src="{{item4_image}}" mode="aspectFit" style="height:{{bannerHeight}}px" class="item4"></image>
+  <image src="{{item4_image}}" mode="aspectFit" class="item4"></image>
 
   <scroll-view scroll-x="true" class="scroll_view">
     <block wx:for="{{itemList4}}" wx:key="{{index}}">
-      <image src="{{item.imgUrl}}" mode="aspectFit" class="item5" style="height:{{item4Width}}px;width:{{item4Width}}px"></image>
+      <image src="{{item.imgUrl}}" mode="aspectFit" class="item5" ></image>
     </block>
-    <view class="item5_container" style="height:{{item4Width}}px;width:{{item4Width}}px">
+    <view class="item5_container">
       <view class="see_more">
         <text class="red">查看全部</text>
         <view class="line"></view>
@@ -46,15 +46,15 @@
   <!--sssssssss  -->
 
   <!--item6___start  -->
-  <image src="{{item6_image}}" mode="aspectFit" style="height:{{bannerHeight}}px" class="item6_image"></image>
+  <image src="{{item6_image}}" mode="aspectFit" class="item6_image"></image>
 
   <scroll-view scroll-x="true" class="scroll_view">
     <view wx:for="{{itemList6}}" class="item6" wx:key="{{index}}">
-      <image src="{{item.logoUrl}}" mode="aspectFit" style="height:{{item4Width}}px;width:{{item4Width}}px" class="item6_logo"></image>
+      <image src="{{item.logoUrl}}" mode="aspectFit" class="item6_logo"></image>
       <image src="{{item.iconUrl}}" mode="aspectFit" class="item6_icon"></image>
-      <view class="item6_title" style="width:{{item4Width}}px"><text>{{item.name+'\n'+item.introduce}}</text></view>
+      <view class="item6_title" ><text>{{item.name+'\n'+item.introduce}}</text></view>
     </view>
-    <view class="item5_container" style="height:{{item4Width}}px;width:{{item4Width}}px">
+    <view class="item5_container">
       <view class="see_more">
         <text class="red">查看全部</text>
         <view class="line"></view>
@@ -67,19 +67,19 @@
 
   <!--item7_start  -->
 
-  <image src="{{item7_image}}" mode="aspectFit" style="height:{{bannerHeight}}px" class="item6_image"></image>
+  <image src="{{item7_image}}" mode="aspectFit" class="item6_image"></image>
 
   <scroll-view scroll-x="true" class="scroll_view">
     <view wx:for="{{itemList7}}" class="item7_container" wx:key="{{index}}">
-      <image src="{{item.imgUrl}}" mode="aspectFit" class="item7" style="height:{{item4Width}}px;width:{{item4Width}}px">
+      <image src="{{item.imgUrl}}" mode="aspectFit" class="item7">
         <view class="item7_discount">{{item.benefitPoint}}</view>
         <view class="item7_sku"><text>{{item.colorDesc}}</text></view>
       </image>
-      <text class="item7_name" style="width:{{item4Width}}px">{{item.title}}</text>
-      <text class="item7_des" style="width:{{item4Width}}px">{{item.introduce}}</text>
-      <text class="item7_price" style="width:{{item4Width}}px">￥{{item.currentPrice}}</text>
+      <text class="item7_name">{{item.title}}</text>
+      <text class="item7_des" >{{item.introduce}}</text>
+      <text class="item7_price" >￥{{item.currentPrice}}</text>
     </view>
-    <view class="item5_container" style="height:{{item4Width}}px;width:{{item4Width}}px">
+    <view class="item5_container">
       <view class="see_more">
         <text class="red">查看全部</text>
         <view class="line"></view>
@@ -123,7 +123,7 @@
 
       <text class="tuijian_brandname">{{item.brandName}}</text>
     </view>
-    <image src="{{item.imgUrl}}" class="tuijian_image" style="height:{{screenWidth}}px"></image>
+    <image src="{{item.imgUrl}}" class="tuijian_image" ></image>
 
     <view class="tuijian_title"><text >{{item.title}}</text></view>
     <view class="tuijian_subtitle"><text >{{item.subTitle}}</text></view>
@@ -156,7 +156,7 @@
 
     <view class="album_container">
     <block wx:for="{{item.albumGoodsList}}"   wx:for-item="album">
-        <image src="{{album.imageUrl}}" style="height:{{albumHeigh}}px" class="album_image"></image>
+        <image src="{{album.imageUrl}}" class="album_image"></image>
     </block>
     </view>
 

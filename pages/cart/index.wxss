@@ -88,6 +88,7 @@
 
 .good_list image{
   width: 92%;
+  height: 345rpx;
   margin-top: 16rpx;
   margin-left: 4%;
   margin-right: 4%;
@@ -161,6 +162,7 @@
   padding: 2rpx;
   margin-left: 10rpx;
   display: inline-block;
+   border: 1px solid #ff5454;
 }
 /*评价信息  */
 .good_comment{

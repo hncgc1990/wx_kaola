@@ -51,6 +51,7 @@
 
 .banner_item {
   width: 80%;
+  height: 375rpx;
   display: inline-block;
   margin: 0 8rpx;
 }
@@ -85,6 +86,8 @@
   text-align: center;
   width: 100%;
   position: relative;
+  height:375rpx;
+  background-size:750rpx 375rpx;
 }
 
 .icon_cotent{
@@ -165,14 +168,13 @@ scroll-view{
 }
 
 .item7{
-   display: inline-block;
+   display: block;
    margin: 16rpx 8rpx;
+   width: 210rpx;
+   height: 210rpx;
+    position: relative;
 }
 
-.item7{
-  position: relative;
-  display: block;
-}
 
 .item7_discount{
   color: red;
@@ -211,6 +213,7 @@ scroll-view{
   font-size: 11px;
    overflow:hidden;
   text-overflow: ellipsis ;
+  width: 210rpx;
 }
 .item7_price{
   color: red;
@@ -227,6 +230,8 @@ scroll-view{
     box-sizing: border-box;
     position: absolute;
     top: 0;
+     width: 210rpx;
+   height: 210rpx;
 }
 .see_more{
   margin-top: 50%;
@@ -304,6 +309,7 @@ scroll-view{
 
 .item1_image{
   width: 100%;
+  height: 375rpx;
   position: relative;
   padding-top: 8rpx;
   background-color: #eee;
@@ -363,6 +369,8 @@ scroll-view{
 
 .item2_imglist{
   white-space: nowrap;
+  width: 250rpx;
+  height: 250rpx;
 }
 
 .item2_title{

@@ -27,7 +27,7 @@
       </view>
       <view class="hotcategory_list">
         <view class="hotcategory_item" wx:for="{{hotCategoryList}}">
-          <image src="{{item.iconUrl}}" style="height:{{imageHeight}}px"></image>
+          <image src="{{item.iconUrl}}"></image>
           <view class="hotcategory_name"><text>{{item.categoryName}}</text></view>
         </view>
       </view>
@@ -39,7 +39,7 @@
 
     <view class="hotcategory_list">
         <view class="hotcategory_item" wx:for="{{brandList}}">
-          <image src="{{item.brandLogo}}" style="height:{{imageHeight}}px" class="with_border"></image>
+          <image src="{{item.brandLogo}}"class="with_border"></image>
           <view class="hotcategory_name"><text>{{item.brandName}}</text></view>
         </view>
       </view>

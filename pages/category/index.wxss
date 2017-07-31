@@ -85,6 +85,7 @@
 .hotcategory_item image{
   width: 100%;
   display: block;
+  height: 147rpx;
 }
 
 .hotcategory_item text{

@@ -19,12 +19,13 @@ scroll-view{
 
 /*轮播广告  */
 .banner{
-  /* height: 300rpx; */
+   height: 375rpx; 
   margin-top: 82rpx;
 }
 
 .banner_img,.item4{
   width: 100%;
+  height: 375rpx; 
 }
 
 /*item  */
@@ -38,10 +39,16 @@ scroll-view{
 
 .item_img {
   width: 20%;
+  height: 117rpx;
 }
 
 .itemList2 image{
   width: 50%;
+  height: 187.5rpx;
+}
+
+.item3_image{
+  height: 434rpx;
 }
 
 .scroll_view{
@@ -56,6 +63,8 @@ scroll-view{
 .item5,.item6,.item7{
    display: inline-block;
    margin: 16rpx 8rpx;
+   width: 210rpx;
+   height: 210rpx;
 }
 .item5:first-child,.item6:first-child{
   margin-left: 16rpx;
@@ -73,6 +82,8 @@ scroll-view{
     box-sizing: border-box;
     position: absolute;
     top: 0;
+     width: 210rpx;
+   height: 210rpx;
 }
 .see_more{
   margin-top: 50%;
@@ -95,6 +106,7 @@ scroll-view{
 .item6_image{
   position: relative;
   width: 100%;
+  height: 375rpx;
 }
 
 .item6_image::after{
@@ -112,6 +124,8 @@ scroll-view{
 }
 .item6_logo{
   display: block;
+  width: 210rpx;
+  height: 210rpx;
 }
 
 .item6_icon{
@@ -132,6 +146,7 @@ scroll-view{
   font-size: 11px;
   overflow:hidden;
   text-overflow: clip ;
+   width: 210rpx;
 }
 
 .item6_title text{
@@ -180,6 +195,7 @@ scroll-view{
   font-size: 11px;
    overflow:hidden;
   text-overflow: ellipsis ;
+   width: 210rpx;
 }
 .item7_price{
   color: red;
@@ -265,6 +281,7 @@ scroll-view{
 
 .tuijian_image{
   width: 100%;
+  height: 750rpx;
 }
 
 .tuijian_title{
@@ -389,4 +406,5 @@ color: #aaa;
   width: 30%;
   /* border: 1px solid #eee; */
   margin-bottom: 4rpx;
+  height: 225rpx;
 }

@@ -8,7 +8,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imageHeight:"",
     categories:[],
     hotKey:'春雨面膜',
     selected:0,
@@ -25,18 +24,6 @@ Page({
 
   },
   onLoad: function (options){
-    var page=this
-      wx.getSystemInfo({
-        success: function(res) {
-            page.setData({
-              imageHeight:res.screenWidth*0.7*0.28
-            })
-
-        },
-      })
-
-
-
       this.setData({
         categories: category.body.categoryTreeMenuList,
         brandList:childCategory.body.brandList,

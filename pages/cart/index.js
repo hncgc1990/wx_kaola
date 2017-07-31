@@ -9,7 +9,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-     imagewidth:"",
      recommendList:[]
   },
 
@@ -17,16 +16,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      var page=this
-      wx.getSystemInfo({
-        success: function(res) {
-          page.setData({
-            imagewidth:res.screenWidth*0.46
-          })
-
-        },
-      })    
-
       this.setData({
         recommendList: cart.body.guide.recommend.goods
       })
