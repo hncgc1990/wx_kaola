@@ -47,8 +47,13 @@ scroll-view{
   height: 187.5rpx;
 }
 
+.itemList3{
+  width: 100%;
+}
+
 .item3_image{
   height: 434rpx;
+  width: 50%;
 }
 
 .scroll_view{

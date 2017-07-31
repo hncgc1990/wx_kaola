@@ -369,9 +369,13 @@ scroll-view{
 
 .item2_imglist{
   white-space: nowrap;
-  width: 250rpx;
+ 
+}
+.item2_imglist image{
+   width: 250rpx;
   height: 250rpx;
 }
+
 
 .item2_title{
   padding-top: 24rpx;

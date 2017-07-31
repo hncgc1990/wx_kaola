@@ -22,7 +22,7 @@
     </block>
   </view>
 
-  <view class="itemList2">
+  <view class="itemList3">
     <block wx:for="{{itemList3}}" wx:key="{{index}}">
       <image src="{{item.imgUrl}}" mode="aspectFit" class="item3_image"></image>
     </block>
