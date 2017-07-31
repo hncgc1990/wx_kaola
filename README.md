@@ -4,6 +4,9 @@
 #### 首页
 ![](./screenshot/main.png) 
 
+#### 分类
+![](./screenshot/category.png)
+
 #### 发现
 ![](./screenshot/discovery.png)
 
