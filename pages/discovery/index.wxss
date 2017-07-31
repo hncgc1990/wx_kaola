@@ -102,8 +102,8 @@
 
 /*播放按钮  */
 .ic_play {
-  height: 80rpx;
-  width: 80rpx;
+  height: 120rpx;
+  width: 120rpx;
 }
 
 .liverec_content{

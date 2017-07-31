@@ -83,7 +83,7 @@
       <scroll-view scroll-x="true" class="scroll_view">
         <view wx:for="{{item.itemList}}" class="item7_container" wx:for-item="good">
           <image src="{{good.imgUrl}}" mode="aspectFit" class="item7" >
-            <view class="item7_discount" wx:if="{{good.benefitPoint}}">{{good.benefitPoint}}</view>
+            <view class="item7_discount" wx:if="{{good.singleBenefitPoint}}">{{good.singleBenefitPoint}}</view>
             <view class="item7_sku" wx:if="{{good.colorDesc}}"><text>{{good.colorDesc}}</text></view>
           </image>
           <text class="item7_name" >{{good.title}}</text>

@@ -1,52 +1,96 @@
-<!--pages/category/index.wxml-->
-<import src="../common/searchbar.wxml" />
-
-
+<!-- pages/category/index.wxml -->
+<import src="../common/searchbar.wxml"  />
 <view class="container">
-  <!--搜索栏  -->
-  <template is="searchbar" data="{{hotKey}}" />
-
+  <!-- 搜索栏 -->
+  <template is="searchbar" data="{{hotKey}}"  />
   <view class="content">
-    <!--左边类目  -->
-    <scroll-view class="category_main" scroll-y>
-      <view class="category_item {{index==selected?'active':''}}" wx:for="{{categories}}" data-index="{{index}}" bindtap="changeSelect">
+    <!-- 左边类目 -->
+    <scroll-view class="category_main"scroll-y>
+      <view class="category_item {{index==selected?'active':''}}" wx:for="{{categories}}" data-index="{{index}}"
+            bindtap="changeSelect">
         <text>{{item.title}}</text>
       </view>
     </scroll-view>
-    <!--右边子类目  -->
-
-    <scroll-view class="category_child" scroll-y>
-
-      <!-热门分类  -->
-      <view class="hotcategory_title">
-        <text>热门分类</text>
-        <view class="hotcategory_more">
-          <text>热销榜</text>
-          <image src="/assets/images/hot_sale_arrow.png"></image>
+    <!-- 右边子类目 -->
+    <scroll-view class="category_child"scroll-y>
+      <!-- 热门分类 -->
+      <view wx:if="{{data.body.hotCategoryList}}">
+        <view class="hotcategory_title">
+          <text>热门分类</text>
+          <view class="hotcategory_more">
+            <text>热销榜</text>
+            <image src="/assets/images/hot_sale_arrow.png"></image>
+          </view>
         </view>
-      </view>
-      <view class="hotcategory_list">
-        <view class="hotcategory_item" wx:for="{{hotCategoryList}}">
-          <image src="{{item.iconUrl}}"></image>
-          <view class="hotcategory_name"><text>{{item.categoryName}}</text></view>
-        </view>
-      </view>
-
-      <!--推荐品牌  -->
-      <view class="hotbrand_title">
-        <text>推荐品牌</text>
-      </view>
-
-    <view class="hotcategory_list">
-        <view class="hotcategory_item" wx:for="{{brandList}}">
-          <image src="{{item.brandLogo}}"class="with_border"></image>
-          <view class="hotcategory_name"><text>{{item.brandName}}</text></view>
+        <view class="hotcategory_list">
+          <view class="hotcategory_item" wx:for="{{data.body.hotCategoryList}}">
+            <image src="{{item.iconUrl}}"></image>
+            <view class="hotcategory_name">
+              <text>{{item.categoryName}}</text>
+            </view>
+          </view>
         </view>
       </view>
 
+      <!--二级分类-->
+       <view wx:if="{{data.body.level2CategoryList}}" wx:for="{{data.body.level2CategoryList}}" class="{{index!=0?'with_margintop':''}}">
+        <view class="hotcategory_title">
+          <text>{{item.categoryName}}</text>
+          <view class="hotcategory_more">
+            <text>热销榜</text>
+            <image src="/assets/images/hot_sale_arrow.png"></image>
+          </view>
+        </view>
+        <view class="hotcategory_list">
+          <view class="hotcategory_item" wx:for="{{item.childCategoryViewList}}" wx:for-item="category">
+            <image src="{{category.iconUrl}}"></image>
+            <view class="hotcategory_name">
+              <text>{{category.categoryName}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
 
-
+      <!-- 推荐品牌 -->
+      <view wx:if="{{data.body.brandList}}">
+        <view class="hotbrand_title">
+          <text>推荐品牌</text>
+        </view>
+        <view class="hotcategory_list">
+          <view class="brand_item" wx:for="{{data.body.brandList}}">
+            <image src="{{item.brandLogo}}" class="brand_image with_border {{index==(data.body.brandList.length-1)?'last_brand':''}}"></image>
+            <view class="hotcategory_name">
+              <text>{{item.keyWords?item.keyWords:item.brandName}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 精选专辑 -->
+      <view wx:if="{{data.body.albumList}}">
+        <view class="album_title">
+          <text>精选专辑</text>
+          <view class="album_refresh">
+            <text>换一换</text>
+            <image src="/assets/images/change_album.png"></image>
+          </view>
+        </view>
+        <view class="album_item" wx:for="{{data.body.albumList}}">
+          <image src="{{item.goodsUrlList[0]}}" class="album_logo"></image>
+          <view class="album_detail">
+            <view>
+              <text>{{item.title}}</text>
+            </view>
+            <view class="">
+              <text>{{item.productNum}}款商品 {{item.buyCount}}人购买</text>
+            </view>
+          </view>
+          <image src="/assets/images/right_arrow_gray.png" class="album_arrow"></image>
+        </view>
+        <view class="album_more">
+          <text>查看更多</text>
+          <image src="/assets/images/right_arrow_gray.png"></image>
+        </view>
+      </view>
     </scroll-view>
-
   </view>
 </view>
