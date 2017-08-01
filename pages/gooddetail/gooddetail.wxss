@@ -1,6 +1,55 @@
 .container {
   background: white;
 }
+/*购物栏  */
+.buy_bar{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+}
+.buy_collect,.buy_cart{
+  width: 125rpx;
+  height: 88rpx;
+  font-size: 11px;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.buy_collect image,.buy_cart image{
+  display: block;
+  width: 36rpx;
+  height: 30rpx;
+  margin-bottom: 8rpx;
+}
+
+.buy_collect{
+  border-right: 1px solid #eee;
+}
+
+.buy_addcart,.buy_now{
+  width: 250rpx;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 88rpx;
+  vertical-align: middle;
+  color: white;
+  text-align: center;
+}
+
+.buy_addcart{
+  background-color: #333;
+}
+
+.buy_now{
+  background-color: red;
+}
+
 
 /*banner栏  */
 

@@ -1,4 +1,19 @@
 <view class="container">
+  <!--购物栏  -->
+  <view class="buy_bar">
+  <view class="buy_collect">
+     <image src="/assets/images/ic_i_like_unselected.png"></image>
+     <text>收藏</text>
+  </view>
+  <view class="buy_cart">
+      <image src="/assets/images/ic_goods_detail_cart.png"></image>
+     <text>购物车</text>
+  </view>
+  <text class="buy_addcart">加入购物车</text>
+  <text class="buy_now">立即购买</text>
+  </view>
+
+
 
   <swiper autoplay="true" indicator-dots="true" class="banner" circular="true" hidden="{{colorImage}}">
     <swiper-item wx:for="{{bannerList}}">
