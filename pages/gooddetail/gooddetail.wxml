@@ -1,0 +1,179 @@
+<view class="container">
+
+  <swiper autoplay="true" indicator-dots="true" class="banner" circular="true" hidden="{{colorImage}}">
+    <swiper-item wx:for="{{bannerList}}">
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <image src="{{colorImage}}" hidden="{{!colorImage}}" class="image_color"></image>
+
+  <!--颜色选择  -->
+  <view class="color_bar">
+    <image src="{{firstColor.breviary}}" class="{{selectColor==0?'color_select':''}}" bindtap="chooseFirst"></image>
+    <view><text>颜色</text></view>
+    <image src="{{item.breviary}}" wx:for="{{colorList}}" class="{{selectColor==(index+1)?'color_select':''}}" data-index="{{index+1}}" bindtap="changeColor"></image>
+  </view>
+
+  <!--价格  -->
+
+  <view class="price_bar">
+    <text class="price_current">￥{{goodDetail.currentPrice}}</text>
+    <text class="price_original">￥{{goodDetail.originalPrice}}</text>
+
+    <text wx:for="{{goodDetail.priceTags}}" class="price_tag"> {{item}}</text>
+
+  </view>
+
+  <!--商品名-->
+  <view class="good_title">
+    <text>{{goodDetail.title}}</text>
+  </view>
+
+  <!--商品副标题-->
+  <view class="good_subTitle">
+    <text>{{goodDetail.subTitle}}</text>
+  </view>
+
+  <!--商品标签-->
+  <view class="good_tags">
+    <block wx:for="{{goodDetail.goodsTags}}">
+      <image src="{{item.icon}}"> </image>
+      <text>{{item.name}}</text>
+    </block>
+  </view>
+
+  <view class="margin_line"> </view>
+
+  <!--促销信息  -->
+  <view class="good_act">
+    <text class="good_act_title">{{goodDetail.activityPromotion.title}}</text>
+    <view class="good_act_content">
+      <text wx:for="{{goodDetail.activityPromotion.contents}}">{{item}}</text>
+    </view>
+    <image src="/assets/images/right_arrow_gray.png"></image>
+  </view>
+
+  <!--配送信息-->
+  <view class="good_exp">
+    <text class="good_exp_title">配送</text>
+    <view class="good_exp_content">
+      <text>{{goodDetail.warehouse}} 至 {{delivery.address}}</text>
+    </view>
+    <image src="/assets/images/right_arrow_gray.png"></image>
+  </view>
+
+  <!--邮费信息-->
+  <view class="good_fee">
+    <text class="good_fee_title">{{delivery.postageIllustrate.title}}</text>
+    <view class="good_fee_content">
+      <text wx:for="{{delivery.postageIllustrate.content}}">{{item}}</text>
+    </view>
+    <image src="/assets/images/right_arrow_gray.png"></image>
+  </view>
+
+
+  <!--说明信息-->
+  <view class="good_ill">
+    <text class="good_ill_title">{{goodDetail.illustrate.title}}</text>
+    <view class="good_ill_content">
+      <text wx:for="{{goodDetail.illustrate.contents}}">{{' '+item+(index!=(goodDetail.illustrate.contents.length-1)?' |':'')}}</text>
+    </view>
+    <image src="/assets/images/right_arrow_gray.png"></image>
+  </view>
+
+  <view class="margin_line"> </view>
+
+  <!--评价信息  -->
+  <view class="common_bar">
+    <text>{{goodDetail.comment.commentLabel}}</text>
+    <image src="/assets/images/right_arrow_gray.png"></image>
+  </view>
+  <scroll-view scroll-x>
+    <view class="comment_item" wx:for="{{goodDetail.comment.excellentCommentList}}">
+      <view class="comment_left">
+        <view class="comment_head">
+          <image src="{{item.avatarKaola}}" class="comment_logo"></image>
+          <text class="comment_user">{{item.nicknameKaola}}</text>
+        </view>
+        <text class="comment_content">{{item.commentContent}}</text>
+      </view>
+      <image src="{{item.imgUrlsFor435[0]}}" mode="aspectFill" class="comment_image"></image>
+      <text class="commen_lable">{{item.imgUrlsFor435.length}}张</text>
+    </view>
+    <view class="comment_more">
+      <text>更多评论</text>
+      <text>see more</text>
+    </view>
+  </scroll-view>
+
+  <view class="margin_line"> </view>
+
+  <!--店铺基本信息  -->
+  <view class="shop_info">
+    <image src="{{goodDetail.popShop.shopLogo}}" class="shop_logo"></image>
+    <view class="shop_content">
+      <text class="shop_name">{{goodDetail.popShop.shopName}}</text>
+      <view class="shop_tags">
+        <block wx:for="{{goodDetail.popShop.shopTagList}}">
+          <image src="{{item.tagIconUrl}}" class="tag_img"></image>
+          <text class="tag_text">{{item.tagContent}}</text>
+        </block>
+      </view>
+    </view>
+    <view class="shop_go">
+    <text>进店看看</text>
+    <image src="/assets/images/right_arrow_gray.png" class="arrow"></image>
+    </view>
+  </view>
+  <view class="margin_line"> </view>
+
+  <!--品牌基本信息  -->
+  <view class="brand_info">
+    <image src="{{brand.brandLogoUrl}}" class="brand_logo"></image>
+    <view class="brand_content">
+      <text class="brand_name">{{brand.brandName}}</text>
+      <text class="brand_text">在售商品{{brand.goodsNum}}件</text>
+    </view>
+    <view class="brand_go">
+    <text>进入品牌</text>
+    <image src="/assets/images/right_arrow_gray.png" class="arrow"></image>
+    </view>
+  </view>
+
+ <scroll-view scroll-x="true" class="scroll_view">
+    <view wx:for="{{brand.goods}}" class="item7_container" wx:key="{{index}}">
+      <image src="{{item.imgUrl}}" mode="aspectFit" class="item7">
+        <view class="item7_discount" wx:if="item.benefitPoint">{{item.benefitPoint}}</view>
+        <view class="item7_sku" wx:if="{{item.colorDesc}}"><text>{{item.colorDesc}}</text></view>
+      </image>
+      <text class="item7_name">{{item.title}}</text>
+      <text class="item7_des" >{{item.introduce}}</text>
+      <text class="item7_price" >￥{{item.currentPrice}}</text>
+    </view>
+    <view class="item5_container">
+        <text class="red">进入品牌</text>
+        <text class="gray">Enter the brand</text>
+    </view>
+  </scroll-view>
+
+
+<view class="margin_line"> </view>
+  <!--热销  -->
+
+  <view class="hot_bar">
+   <view class="hot_title">{{hotsell.name}}</view>
+    <text class="hot_desc">{{hotsell.intro}}</text>
+  </view>
+
+
+  <scroll-view scroll-x="true" class="scroll_view">
+    <view wx:for="{{hotsell.goodsList}}" class="item7_container" wx:key="{{index}}">
+      <image src="{{item.imageUrl}}" mode="aspectFit" class="item7">
+      </image>
+      <text class="item7_price" >￥{{item.suggestPrice}}</text>
+    </view>
+  </scroll-view>
+
+
+</view>
